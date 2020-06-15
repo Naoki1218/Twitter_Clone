@@ -1,0 +1,17 @@
+<h1>リークス一覧</h1>
+<p><%= notice %></p>
+<table>
+  <tr>
+    <th>内容</th>
+  </tr>
+<% @rats.each do |rat| %>
+  <tr>
+    <td><%= rat.content %></td>
+    <td><%= link_to '詳細を確認する', rat_path(rat.id) %></td>
+    <td><%= link_to '情報を編集する', edit_rat_path(rat.id), data: { confirm: '本当に編集していいですか？' } %></td>
+    <td><%= link_to '情報を削除する', rat_path(rat.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+  </tr>
+<% end %>
+</table>
+<br>
+<%= link_to '新しい情報をシェアする', new_rat_path %>

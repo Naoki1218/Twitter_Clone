@@ -1,0 +1,33 @@
+body{
+	margin: 0;
+}
+
+.header {
+  background-color: #4267B2;
+  height: 70px;
+}
+
+.header p {
+  font-size: 2rem;
+  color: #000000;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer{
+  background-color: #4D4D4D;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: table;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}

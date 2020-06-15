@@ -1,0 +1,18 @@
+<%= form_with(model: @rat, local: true ,url: confirm_rats_path) do |form| %>
+  <% if @rat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @rat.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @rat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="rat_content">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit %>
+<% end %>
+<%= link_to "リークス一覧画面にもどる", rats_path %>
