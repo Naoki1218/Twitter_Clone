@@ -10,10 +10,14 @@ class RatsController < ApplicationController
 
   def create
     @rat = Rat.new(rat_params)
-    if @rat.save
-      redirect_to rats_path, notice: "リークしました！"
-    else
+    if params[:back]
       render :new
+    else
+      if @rat.save
+        redirect_to rats_path, notice: "リークしました！"
+      else
+        render :new
+      end
     end
   end
 
