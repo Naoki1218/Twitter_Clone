@@ -1,4 +1,4 @@
-<%= form_with(model: @rat, local: true ,url: confirm_rats_path) do |form| %>
+<%= form_with(model: @rat, local: true ,url: choose_new_or_edit) do |form| %>
   <% if @rat.errors.any? %>
     <div id="error_explanation">
       <h2><%= @rat.errors.count %>件のエラーがあります。</h2>
