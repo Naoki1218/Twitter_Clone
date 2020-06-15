@@ -45,6 +45,7 @@ class RatsController < ApplicationController
 
   def confirm
     @rat = Rat.new(rat_params)
+    render :new if @rat.invalid?
   end
 
   private
