@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2020_06_13_181237) do
   enable_extension "plpgsql"
 
   create_table "rats", force: :cascade do |t|
-    t.string "title"
     t.text "content"
   end
 
